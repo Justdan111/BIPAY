@@ -1,5 +1,7 @@
 import { createBrowserRouter, RouteObject } from 'react-router-dom';
 import HomePage from '../pages/homePage';
+import SignupPage from '../pages/signupPage';
+import OTPPage from '../pages/verifyOTP';
 
 
 export type Roles = "admin" | "hr" | "employee";
@@ -27,10 +29,16 @@ export type RouteWithMeta = RouteObject & {
     },
     {
       path: '/signup',
-      element: <></>,
+      element: <SignupPage/>,
       title: "Signup Page",
       wrapper: "public",
     },
+    {
+        path: '/otp',
+        element: <OTPPage/>,
+        title: "Signup Page",
+        wrapper: "public",
+      },
    
     {
       path: '*',
